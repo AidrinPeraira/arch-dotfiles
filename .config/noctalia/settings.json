@@ -224,45 +224,6 @@
                     "useDistroLogo": false
                 },
                 {
-                    "commandPrefix": "music-search",
-                    "defaultSettings": {
-                        "autoSaveMp3AfterPlayback": false,
-                        "defaultPanelLibrarySection": "tracks",
-                        "defaultPanelTab": "search",
-                        "panelDensity": "balanced",
-                        "previewMetadataMode": "always",
-                        "previewPaneWidth": 0,
-                        "previewThumbnailSize": "comfortable",
-                        "showAlbumMetadata": true,
-                        "showBarHoverTrackTitle": true,
-                        "showDurationMetadata": true,
-                        "showHomeArtists": true,
-                        "showHomePlaylists": true,
-                        "showHomeRecent": true,
-                        "showHomeTags": true,
-                        "showHomeTop": true,
-                        "showPanelHeader": true,
-                        "showPanelNowPlaying": true,
-                        "showPanelPlaybackProgress": true,
-                        "showPanelPreview": true,
-                        "showPanelProviderChips": true,
-                        "showPanelQueueControls": true,
-                        "showPanelRecentTracks": true,
-                        "showPanelSearchHelper": true,
-                        "showPanelSpeedControls": true,
-                        "showPanelStatusBanner": true,
-                        "showPanelUrlActions": true,
-                        "showPlayStatsMetadata": true,
-                        "showPreviewChips": true,
-                        "showRatingMetadata": true,
-                        "showStatusMetadata": true,
-                        "showTagMetadata": true,
-                        "showUploaderMetadata": true,
-                        "ytPlayerClient": "android"
-                    },
-                    "id": "plugin:music-search"
-                },
-                {
                     "defaultSettings": {
                         "debug": false,
                         "rogcc": {
@@ -305,6 +266,45 @@
                         ]
                     },
                     "id": "plugin:wallcards"
+                },
+                {
+                    "commandPrefix": "music-search",
+                    "defaultSettings": {
+                        "autoSaveMp3AfterPlayback": false,
+                        "defaultPanelLibrarySection": "tracks",
+                        "defaultPanelTab": "search",
+                        "panelDensity": "balanced",
+                        "previewMetadataMode": "always",
+                        "previewPaneWidth": 0,
+                        "previewThumbnailSize": "comfortable",
+                        "showAlbumMetadata": true,
+                        "showBarHoverTrackTitle": true,
+                        "showDurationMetadata": true,
+                        "showHomeArtists": true,
+                        "showHomePlaylists": true,
+                        "showHomeRecent": true,
+                        "showHomeTags": true,
+                        "showHomeTop": true,
+                        "showPanelHeader": true,
+                        "showPanelNowPlaying": true,
+                        "showPanelPlaybackProgress": true,
+                        "showPanelPreview": true,
+                        "showPanelProviderChips": true,
+                        "showPanelQueueControls": true,
+                        "showPanelRecentTracks": true,
+                        "showPanelSearchHelper": true,
+                        "showPanelSpeedControls": true,
+                        "showPanelStatusBanner": true,
+                        "showPanelUrlActions": true,
+                        "showPlayStatsMetadata": true,
+                        "showPreviewChips": true,
+                        "showRatingMetadata": true,
+                        "showStatusMetadata": true,
+                        "showTagMetadata": true,
+                        "showUploaderMetadata": true,
+                        "ytPlayerClient": "android"
+                    },
+                    "id": "plugin:music-search"
                 }
             ]
         }
@@ -623,7 +623,7 @@
         "bluetoothRssiPollingEnabled": true,
         "disableDiscoverability": true,
         "networkPanelView": "wifi",
-        "wifiDetailsViewMode": "grid"
+        "wifiDetailsViewMode": "list"
     },
     "nightLight": {
         "autoSchedule": true,
@@ -800,7 +800,7 @@
     },
     "wallpaper": {
         "automationEnabled": true,
-        "directory": "/home/aidrin-peraira/Wallpapers",
+        "directory": "/home/aidrin-peraira/Pictures/Wallpapers",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
         "favorites": [
