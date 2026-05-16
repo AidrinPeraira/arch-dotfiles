@@ -51,6 +51,15 @@ layout {
 
     default-column-width { proportion 0.5; }
 
+    focus-ring {
+        off
+    }
+
+    border {
+        on
+        width 2
+    }
+
     shadow {
         on
         softness 30
@@ -116,6 +125,13 @@ animations {
     }
 
 
+}
+
+blur {
+    // Number of times to apply the blur effect.
+    passes 3
+    // Sample distance per pass. Higher values increase blur spread.
+    offset 3.0
 }
 
 // ── Window Rules ──────────────────────────────────────────────
@@ -353,10 +369,15 @@ layer-rule {
 //-----------window customisations ---------------------
 
 
-// 1. Set global active transparency
+// 1. Set global active transparency and blur
 window-rule {
     match {} // Applies to all windows
-    opacity 0.85
+    opacity 0.95
+    draw-border-with-background false
+    background-effect {
+        blur true
+        xray false
+    }
 }
 
 // 2. Set inactive transparency, but exclude your bar
@@ -366,7 +387,7 @@ window-rule {
     exclude app-id="noctalia" // Adding this just in case
     exclude app-id="xdg-desktop-portal-gtk" 
     
-    opacity 0.8	
+    opacity 0.95
 }
 
 // ── Fuzzel Layer Rule ──────────────────────────────────────────
@@ -375,4 +396,8 @@ layer-rule {
     
     // This allows the launcher to be opaque even if windows behind it are dim
     opacity 1.0
+    background-effect {
+        blur true
+        xray false
+    }
 }
