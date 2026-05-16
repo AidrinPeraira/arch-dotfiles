@@ -133,3 +133,11 @@ alias monitors="launch nwg-displays"
 alias files="nnn"
 alias system-stats="btm --battery --network_use_bytes --enable_cache_memory --get_threads --process_command"
 alias dot-git='/usr/bin/git --git-dir=/home/aidrin-peraira/.dotfiles/ --work-tree=/home/aidrin-peraira'
+
+# Gemini CLI Aliases
+alias ai-agent='gemini'
+alias ai-chat='gemini "For this conversation remember not to use any tools. Act exclusively like a chat bot. Do not write any code that needs to be executed. Only answer queries. You are permitted to read files if you need additional context."'
+alias api-tester="~/Programmes/bruno_3.3.0_x86_64_linux.AppImage"
+alias stop-noctalia="qs kill -c noctalia-shell"
+alias start-noctalia="qs -c noctalia-shell -d"
+alias import-playlist="$HOME/import_yt_playlist.sh"
