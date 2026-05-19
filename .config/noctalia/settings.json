@@ -782,7 +782,7 @@
     "templates": {
         "activeTemplates": [
         ],
-        "enableUserTheming": false
+        "enableUserTheming": true,
     },
     "ui": {
         "boxBorderEnabled": false,

@@ -140,4 +140,4 @@ alias ai-chat='gemini "For this conversation remember not to use any tools. Act 
 alias api-tester="~/Programmes/bruno_3.3.0_x86_64_linux.AppImage"
 alias stop-noctalia="qs kill -c noctalia-shell"
 alias start-noctalia="qs -c noctalia-shell -d"
-alias import-playlist="$HOME/import_yt_playlist.sh"
+alias import-playlist="$HOME/Scripts/import_yt_playlist.sh"

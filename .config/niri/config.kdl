@@ -41,7 +41,8 @@ input {
 layout {
     gaps 8
     background-color "transparent"
-    center-focused-column "never"
+    center-focused-column "always"
+    always-center-single-column
 
     preset-column-widths {
         proportion 0.33333
@@ -211,7 +212,7 @@ recent-windows {
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
-    Mod+T { spawn "kitty"; }
+    Mod+T { spawn "alacritty"; }
     Mod+D { spawn "fuzzel"; }
     Super+Alt+L { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "lockScreen" "lock"; }
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
@@ -353,6 +354,7 @@ binds {
 
    Mod+B { spawn  "prime-run" "brave"; }
    Mod+Shift+W { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "plugin:wallcards" "toggle"; }
+   Mod+Shift+M { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "plugin:music" "launcher"; }
 }
 
 
@@ -372,7 +374,7 @@ layer-rule {
 // 1. Set global active transparency and blur
 window-rule {
     match {} // Applies to all windows
-    opacity 0.95
+    opacity 0.85
     draw-border-with-background false
     background-effect {
         blur true
@@ -387,7 +389,7 @@ window-rule {
     exclude app-id="noctalia" // Adding this just in case
     exclude app-id="xdg-desktop-portal-gtk" 
     
-    opacity 0.95
+    opacity 0.85
 }
 
 // ── Fuzzel Layer Rule ──────────────────────────────────────────

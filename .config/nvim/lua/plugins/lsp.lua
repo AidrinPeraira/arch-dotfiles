@@ -5,7 +5,11 @@ return {
     version = "*",
     event = "InsertEnter",
     opts = {
-      keymap = { preset = "default" },
+      keymap = {
+        preset = "super-tab",
+        ["<D-Tab>"] = { "select_next", "fallback" },
+        ["<D-S-Tab>"] = { "select_prev", "fallback" },
+      },
       appearance = {
         use_nvim_cmp_as_default = true,
         nerd_font_variant = "mono",
@@ -31,6 +35,41 @@ return {
     },
   },
 
+  -- CODE FORMATTING ENGINE (PRETTIER SETUP)
+  {
+    "stevearc/conform.nvim",
+    event = { "BufWritePre" },
+    cmd = { "ConformInfo" },
+    keys = {
+      {
+        "<leader>cF",
+        function() require("conform").format({ async = true, lsp_format = "fallback" }) end,
+        mode = "",
+        desc = "Format Buffer",
+      },
+    },
+    opts = {
+      formatters_by_ft = {
+        lua = { "stylua" },
+        sh = { "shfmt" },
+        javascript = { "prettier" },
+        typescript = { "prettier" },
+        javascriptreact = { "prettier" },
+        typescriptreact = { "prettier" },
+        json = { "prettier" },
+        html = { "prettier" },
+        css = { "prettier" },
+        yaml = { "prettier" },
+        markdown = { "prettier" },
+      },
+      -- Automatically picks up local project .prettierrc files and formats on save
+      format_on_save = {
+        timeout_ms = 500,
+        lsp_format = "fallback",
+      },
+    },
+  },
+
   -- 3. MASON PACKAGE MANAGER
   {
     "mason-org/mason.nvim",
@@ -38,7 +77,7 @@ return {
     keys = { { "<leader>cm", "<cmd>Mason<cr>", desc = "Mason" } },
     build = ":MasonUpdate",
     opts = {
-      ensure_installed = { "stylua", "shfmt" },
+      ensure_installed = { "stylua", "shfmt" , "prettier"},
     },
     config = function(_, opts)
       require("mason").setup(opts)
@@ -78,8 +117,36 @@ return {
             },
           },
         },
-        ts_ls = {},
-        vtsls = {},
+        -- ts_ls = {},
+        vtsls = {
+          settings = {
+            typescript = {
+              suggest = {
+                autoImports = true,
+              },
+              preferences = {
+                importModuleSpecifier = "non-relative",
+                importModuleSpecifierEnding = "minimal",
+                includePackageJsonAutoImports = "on",
+                useAliasesForRenames = true,
+              },
+            },
+            javascript = {
+              suggest = {
+                autoImports = true,
+              },
+              preferences = {
+                importModuleSpecifier = "non-relative",
+                importModuleSpecifierEnding = "minimal",
+                includePackageJsonAutoImports = "on",
+                useAliasesForRenames = true,
+              },
+            },
+            vtsls = {
+              autoUseWorkspaceTsdk = true,
+            },
+          },
+        },
         html = {},
         dockerls = {},
         jsonls = {},

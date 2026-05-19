@@ -13,6 +13,8 @@ opt.scrolloff = 8             -- Keep 8 lines visible above/below the cursor
 opt.wrap = false              -- Disable line wrapping
 opt.termguicolors = true      -- Enable 24-bit RGB colors
 opt.cursorline = true         -- Highlight the horizontal row of the cursor
+opt.wrap = true 	      -- Prevent text overflow. Turn on text wrapping.
+opt.linebreak = true          -- Wrap breaks lines at spaces and not between words.
 
 -- Tabs & Indentation
 opt.expandtab = true          -- Convert tabs to spaces
