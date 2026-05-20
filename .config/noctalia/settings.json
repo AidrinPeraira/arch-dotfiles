@@ -6,7 +6,7 @@
         "clipboardWrapText": true,
         "customLaunchPrefix": "",
         "customLaunchPrefixEnabled": false,
-        "density": "comfortable",
+        "density": "default",
         "enableClipPreview": true,
         "enableClipboardChips": true,
         "enableClipboardHistory": false,
@@ -42,20 +42,20 @@
     "bar": {
         "autoHideDelay": 500,
         "autoShowDelay": 150,
-        "backgroundOpacity": 0.93,
-        "barType": "framed",
+        "backgroundOpacity": 0.5700000000000001,
+        "barType": "floating",
         "capsuleColorKey": "none",
-        "capsuleOpacity": 0.48,
-        "contentPadding": 2,
+        "capsuleOpacity": 1,
+        "contentPadding": 9,
         "density": "default",
-        "displayMode": "always_visible",
+        "displayMode": "auto_hide",
         "enableExclusionZoneInset": true,
-        "fontScale": 1,
+        "fontScale": 1.06,
         "frameRadius": 12,
         "frameThickness": 8,
         "hideOnOverview": false,
-        "marginHorizontal": 4,
-        "marginVertical": 4,
+        "marginHorizontal": 17,
+        "marginVertical": 12,
         "middleClickAction": "none",
         "middleClickCommand": "",
         "middleClickFollowMouse": false,
@@ -71,11 +71,11 @@
         "rightClickFollowMouse": true,
         "screenOverrides": [
         ],
-        "showCapsule": true,
-        "showOnWorkspaceSwitch": true,
+        "showCapsule": false,
+        "showOnWorkspaceSwitch": false,
         "showOutline": false,
-        "useSeparateOpacity": false,
-        "widgetSpacing": 6,
+        "useSeparateOpacity": true,
+        "widgetSpacing": 10,
         "widgets": {
             "center": [
                 {
@@ -224,6 +224,45 @@
                     "useDistroLogo": false
                 },
                 {
+                    "commandPrefix": "music-search",
+                    "defaultSettings": {
+                        "autoSaveMp3AfterPlayback": false,
+                        "defaultPanelLibrarySection": "tracks",
+                        "defaultPanelTab": "search",
+                        "panelDensity": "balanced",
+                        "previewMetadataMode": "always",
+                        "previewPaneWidth": 0,
+                        "previewThumbnailSize": "comfortable",
+                        "showAlbumMetadata": true,
+                        "showBarHoverTrackTitle": true,
+                        "showDurationMetadata": true,
+                        "showHomeArtists": true,
+                        "showHomePlaylists": true,
+                        "showHomeRecent": true,
+                        "showHomeTags": true,
+                        "showHomeTop": true,
+                        "showPanelHeader": true,
+                        "showPanelNowPlaying": true,
+                        "showPanelPlaybackProgress": true,
+                        "showPanelPreview": true,
+                        "showPanelProviderChips": true,
+                        "showPanelQueueControls": true,
+                        "showPanelRecentTracks": true,
+                        "showPanelSearchHelper": true,
+                        "showPanelSpeedControls": true,
+                        "showPanelStatusBanner": true,
+                        "showPanelUrlActions": true,
+                        "showPlayStatsMetadata": true,
+                        "showPreviewChips": true,
+                        "showRatingMetadata": true,
+                        "showStatusMetadata": true,
+                        "showTagMetadata": true,
+                        "showUploaderMetadata": true,
+                        "ytPlayerClient": "android"
+                    },
+                    "id": "plugin:music-search"
+                },
+                {
                     "defaultSettings": {
                         "debug": false,
                         "rogcc": {
@@ -266,45 +305,6 @@
                         ]
                     },
                     "id": "plugin:wallcards"
-                },
-                {
-                    "commandPrefix": "music-search",
-                    "defaultSettings": {
-                        "autoSaveMp3AfterPlayback": false,
-                        "defaultPanelLibrarySection": "tracks",
-                        "defaultPanelTab": "search",
-                        "panelDensity": "balanced",
-                        "previewMetadataMode": "always",
-                        "previewPaneWidth": 0,
-                        "previewThumbnailSize": "comfortable",
-                        "showAlbumMetadata": true,
-                        "showBarHoverTrackTitle": true,
-                        "showDurationMetadata": true,
-                        "showHomeArtists": true,
-                        "showHomePlaylists": true,
-                        "showHomeRecent": true,
-                        "showHomeTags": true,
-                        "showHomeTop": true,
-                        "showPanelHeader": true,
-                        "showPanelNowPlaying": true,
-                        "showPanelPlaybackProgress": true,
-                        "showPanelPreview": true,
-                        "showPanelProviderChips": true,
-                        "showPanelQueueControls": true,
-                        "showPanelRecentTracks": true,
-                        "showPanelSearchHelper": true,
-                        "showPanelSpeedControls": true,
-                        "showPanelStatusBanner": true,
-                        "showPanelUrlActions": true,
-                        "showPlayStatsMetadata": true,
-                        "showPreviewChips": true,
-                        "showRatingMetadata": true,
-                        "showStatusMetadata": true,
-                        "showTagMetadata": true,
-                        "showUploaderMetadata": true,
-                        "ytPlayerClient": "android"
-                    },
-                    "id": "plugin:music-search"
                 }
             ]
         }
@@ -371,7 +371,7 @@
             }
         ],
         "diskPath": "/",
-        "position": "close_to_bar_button",
+        "position": "center",
         "shortcuts": {
             "left": [
                 {
@@ -412,63 +412,68 @@
                 "name": "eDP-1",
                 "widgets": [
                     {
-                        "diskPath": "/",
-                        "id": "SystemStat",
-                        "layout": "side",
-                        "roundedCorners": true,
-                        "scale": 1,
-                        "showBackground": true,
-                        "statType": "CPU",
-                        "x": 1451,
-                        "y": 826
-                    },
-                    {
-                        "colorName": "primary",
-                        "height": 72,
-                        "hideWhenIdle": false,
-                        "id": "AudioVisualizer",
-                        "roundedCorners": true,
-                        "scale": 1,
-                        "showBackground": true,
-                        "visualizerType": "linear",
-                        "width": 320,
-                        "x": 16,
-                        "y": 866
-                    },
-                    {
-                        "diskPath": "/",
-                        "id": "SystemStat",
-                        "layout": "side",
-                        "roundedCorners": true,
-                        "scale": 1,
-                        "showBackground": true,
-                        "statType": "Network",
-                        "x": 1452,
-                        "y": 682
-                    },
-                    {
-                        "diskPath": "/",
-                        "id": "SystemStat",
-                        "layout": "side",
-                        "roundedCorners": true,
-                        "scale": 1,
-                        "showBackground": true,
-                        "statType": "Memory",
-                        "x": 1453,
-                        "y": 545
-                    },
-                    {
                         "clockColor": "none",
                         "clockStyle": "digital",
                         "customFont": "",
                         "format": "HH:mm\\nd MMMM yyyy",
                         "id": "Clock",
                         "roundedCorners": true,
-                        "scale": 1,
-                        "showBackground": true,
+                        "showBackground": false,
                         "useCustomFont": false,
-                        "x": 1551,
+                        "x": 13,
                         "y": 16
+                    },
+                    {
+                        "diskPath": "/",
+                        "id": "SystemStat",
+                        "layout": "bottom",
+                        "roundedCorners": true,
+                        "showBackground": false,
+                        "statType": "CPU",
+                        "x": 1457,
+                        "y": 830
+                    },
+                    {
+                        "diskPath": "/",
+                        "id": "SystemStat",
+                        "layout": "bottom",
+                        "roundedCorners": true,
+                        "scale": 1,
+                        "showBackground": false,
+                        "statType": "Memory",
+                        "x": 1458,
+                        "y": 557
+                    },
+                    {
+                        "diskPath": "/",
+                        "id": "SystemStat",
+                        "layout": "bottom",
+                        "roundedCorners": true,
+                        "scale": 1,
+                        "showBackground": false,
+                        "statType": "Network",
+                        "x": 1457,
+                        "y": 694
+                    },
+                    {
+                        "hideMode": "visible",
+                        "id": "MediaPlayer",
+                        "roundedCorners": true,
+                        "scale": 1,
+                        "showAlbumArt": false,
+                        "showBackground": false,
+                        "showButtons": false,
+                        "showVisualizer": true,
+                        "visualizerType": "linear",
+                        "x": 10,
+                        "y": 858
+                    },
+                    {
+                        "id": "Weather",
+                        "roundedCorners": true,
+                        "showBackground": false,
+                        "x": 11,
+                        "y": 193
                     }
                 ]
             }
@@ -477,7 +482,7 @@
     },
     "dock": {
         "animationSpeed": 1,
-        "backgroundOpacity": 1,
+        "backgroundOpacity": 0.4,
         "colorizeIcons": false,
         "deadOpacity": 0.6,
         "displayMode": "auto_hide",
@@ -502,7 +507,7 @@
         "pinnedApps": [
         ],
         "pinnedStatic": false,
-        "position": "bottom",
+        "position": "left",
         "showDockIndicator": false,
         "showLauncherIcon": false,
         "sitOnFrame": false,
@@ -516,7 +521,7 @@
         "autoStartAuth": false,
         "avatarImage": "/home/aidrin-peraira/.face",
         "boxRadiusRatio": 1,
-        "clockFormat": "hh\\nmm",
+        "clockFormat": "hh\\nmmH ",
         "clockStyle": "custom",
         "compactLockScreen": false,
         "dimmerOpacity": 0.2,
@@ -576,18 +581,18 @@
     "hooks": {
         "colorGeneration": "",
         "darkModeChange": "",
-        "enabled": true,
+        "enabled": false,
         "performanceModeDisabled": "",
         "performanceModeEnabled": "",
         "screenLock": "",
         "screenUnlock": "",
         "session": "",
-        "startup": "~/.config/noctalia/sync-theme.sh",
-        "wallpaperChange": "~/.config/noctalia/sync-theme.sh"
+        "startup": "",
+        "wallpaperChange": ""
     },
     "idle": {
         "customCommands": "[]",
-        "enabled": true,
+        "enabled": false,
         "fadeDuration": 5,
         "lockCommand": "",
         "lockTimeout": 660,
@@ -605,7 +610,7 @@
         "firstDayOfWeek": -1,
         "hideWeatherCityName": false,
         "hideWeatherTimezone": false,
-        "name": "",
+        "name": "Kochi, Kerala",
         "showCalendarEvents": true,
         "showCalendarWeather": true,
         "showWeekNumberInCalendar": false,
@@ -617,13 +622,13 @@
     },
     "network": {
         "bluetoothAutoConnect": true,
-        "bluetoothDetailsViewMode": "list",
-        "bluetoothHideUnnamedDevices": true,
+        "bluetoothDetailsViewMode": "grid",
+        "bluetoothHideUnnamedDevices": false,
         "bluetoothRssiPollIntervalMs": 60000,
-        "bluetoothRssiPollingEnabled": true,
-        "disableDiscoverability": true,
+        "bluetoothRssiPollingEnabled": false,
+        "disableDiscoverability": false,
         "networkPanelView": "wifi",
-        "wifiDetailsViewMode": "list"
+        "wifiDetailsViewMode": "grid"
     },
     "nightLight": {
         "autoSchedule": true,
@@ -782,7 +787,7 @@
     "templates": {
         "activeTemplates": [
         ],
-        "enableUserTheming": true,
+        "enableUserTheming": false
     },
     "ui": {
         "boxBorderEnabled": false,
@@ -799,7 +804,7 @@
         "translucentWidgets": false
     },
     "wallpaper": {
-        "automationEnabled": true,
+        "automationEnabled": false,
         "directory": "/home/aidrin-peraira/Pictures/Wallpapers",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
@@ -811,11 +816,11 @@
         "linkLightAndDarkWallpapers": true,
         "monitorDirectories": [
         ],
-        "overviewBlur": 0,
-        "overviewEnabled": true,
-        "overviewTint": 0,
-        "panelPosition": "center",
-        "randomIntervalSec": 46800,
+        "overviewBlur": 0.4,
+        "overviewEnabled": false,
+        "overviewTint": 0.6,
+        "panelPosition": "follow_bar",
+        "randomIntervalSec": 300,
         "setWallpaperOnAllMonitors": true,
         "showHiddenFiles": false,
         "skipStartupTransition": false,
@@ -831,10 +836,10 @@
             "pixelate",
             "honeycomb"
         ],
-        "useOriginalImages": true,
+        "useOriginalImages": false,
         "useSolidColor": false,
         "useWallhaven": false,
-        "viewMode": "recursive",
+        "viewMode": "single",
         "wallhavenApiKey": "",
         "wallhavenCategories": "111",
         "wallhavenOrder": "desc",

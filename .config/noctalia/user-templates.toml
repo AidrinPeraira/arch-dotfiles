@@ -1,0 +1,7 @@
+[templates.alacritty]
+input_path = '/home/aidrin-peraira/.config/noctalia/templates/alacritty.toml'
+output_path = '/home/aidrin-peraira/.config/alacritty/themes/matugen.toml'
+
+[templates.nvim]
+input_path = '/home/aidrin-peraira/.config/noctalia/templates/nvim-colors.lua'
+output_path = '/home/aidrin-peraira/.config/nvim/lua/config/matugen.lua'
