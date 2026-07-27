@@ -134,10 +134,36 @@ alias files="nnn"
 alias system-stats="btm --battery --network_use_bytes --enable_cache_memory --get_threads --process_command"
 alias dot-git='/usr/bin/git --git-dir=/home/aidrin-peraira/.dotfiles/ --work-tree=/home/aidrin-peraira'
 
-# Gemini CLI Aliases
-alias ai-agent='gemini'
-alias ai-chat='gemini "For this conversation remember not to use any tools. Act exclusively like a chat bot. Do not write any code that needs to be executed. Only answer queries. You are permitted to read files if you need additional context."'
-alias api-tester="~/Programmes/bruno_3.3.0_x86_64_linux.AppImage"
+alias start-bruno="~/Programmes/bruno_3.5.3_x86_64_linux.AppImage"
 alias stop-noctalia="qs kill -c noctalia-shell"
 alias start-noctalia="qs -c noctalia-shell -d"
 alias import-playlist="$HOME/Scripts/import_yt_playlist.sh"
+
+# pnpm
+export PNPM_HOME="/home/aidrin-peraira/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
+esac
+# pnpm end
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/aidrin-peraira/.local/bin:$PATH"
+export PATH="/home/aidrin-peraira/.local/bin:$PATH"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
